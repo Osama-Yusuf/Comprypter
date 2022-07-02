@@ -44,15 +44,32 @@ You can delete the script now if you want.
 rm -f comprypt.sh
 ```
 
+---
+
 Then execute the script inside desired directory and let it do all the work:
+
+You can pass the file name as an argument:
+
+```
+comprypt file_name
+```
+
+```
+source comprypt.sh file_name
+```
+
+Or just execute script and add the files name or full path later:
 
 ```
 comprypt
 ```
-or
+
+
 ```
 source comprypt.sh
 ```
+
+---
 
 ### To Uninstall it:
 
