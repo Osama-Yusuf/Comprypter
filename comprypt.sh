@@ -89,10 +89,10 @@ decrypt(){
 choose() {
     read -p """Which of the following tasks would you like to achieve
                     
-    1- Compress Files or Folder
-    2- Decompress Files or Folder
-    3- Encrypt Files or Folder
-    4- Decrypt Files or Folder
+    1- Compress $name
+    2- Decompress $name
+    3- Encrypt $name
+    4- Decrypt $name
     
     (1),(2),(3),(4): """ confirm
 
