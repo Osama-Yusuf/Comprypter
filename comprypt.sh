@@ -27,9 +27,8 @@ copmpress(){
     if [ -f "$name" ] || [ -d "$name" ]; then
         echo "Good, $name do exists, lets compress it"
         echo
-        zip -r "$name.zip" "$name" >/dev/null
+        zip -r "$name" "$name" >/dev/null
         clear
-        sleep 1
         echo "The file/folder has been compressed"
     else
         echo "The file/folder does not exist"
@@ -43,7 +42,6 @@ decompress() {
     if [ -f "$name" ]; then
         echo "Good, $name do exists, lets compress it"
         unzip "$name" >/dev/null
-        sleep 1
         clear
         echo "The file has been decompressed"
     else
@@ -60,7 +58,6 @@ encrypt(){
         echo "Good, $name do exists, lets encrypt it"
         echo
         gpg -c "$name" >/dev/null
-        sleep 1
         clear
         echo "The file has been encrypted"
     else
@@ -75,10 +72,9 @@ decrypt(){
     if [ -f "$name" ]; then
         echo "Good, $name do exists, lets decrypt it"
         echo
-        gpg -d "$name.gpg" > $name
-        sleep 1
+        gpg -d "$name" > $name
         clear
-        echo "The file has been encrypted"
+        echo "The file has been decrypted"
     else
         echo "The file does not exist"
         exit 1 
